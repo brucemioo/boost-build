@@ -14,8 +14,10 @@ message(FATAL_ERROR
     ")
 endif()
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -DNO_BZIP2" )
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNO_BZIP2")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -DNO_BZIP2 -fPIC -std=c++11 -stdlib=libc+" )
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNO_BZIP2 -fPIC -std=c++11 -stdlib=libc+")
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -DNO_BZIP2" )
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNO_BZIP2" )
 
 include_directories(${boost_root} )
 
